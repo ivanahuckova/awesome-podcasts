@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome To Awesome Podcasts!</h1>
+            <p>View our hand-picked podcasts from all over the world</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/podcasts/new">Add New Podcast</a>
+            </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% podcasts.forEach(function(podcast){ %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail">
+                <img src="<%= podcast.image %>">
+                <div class="caption">
+                    <h4><%= podcast.name %></h4>
+                    <% if (podcast.rating === 0) { %>
+                    <em>No reviews yet.</em>
+                    <% } else { %>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star <% if (podcast.rating > 1.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (podcast.rating > 2.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (podcast.rating > 3.5) { %> checked <% } %>"></span>
+                    <span class="fa fa-star <% if (podcast.rating > 4.5) { %> checked <% } %>"></span>
+                    <% } %>
+                </div>
+                <p>
+                    <a href="/podcasts/<%= podcast._id %>" class="btn btn-primary">More Info</a>
+                </p>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+</div>
+
+<% include ../partials/footer %>
