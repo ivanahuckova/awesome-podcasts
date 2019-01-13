@@ -49,6 +49,6 @@ app.use("/podcasts/:id/comments", commentRoutes);
 app.use("/podcasts/:id/reviews", reviewRoutes);
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT || 3000, process.env.IP, function(){
    console.log("The Awesome Podcasts Server Has Started!");
 });

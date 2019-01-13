@@ -1,3 +1,7 @@
+p, h1, h2, h3, h4, h5, a, button, input, textarea, div {
+  font-family: 'Inconsolata', monospace;
+}
+
 body {
   background-color: #000;
 }
@@ -11,6 +15,17 @@ body {
 
 #landing-header h1 {
   color: #fff;
+}
+
+.btn-yellow {
+  background-color: #F2D221;
+  color: rgb(74,0,224);
+  font-weight: 700;
+}
+
+.alert-yellow {
+  background-color: rgb(242,210,33, 0.2);
+  color:rgb(74,0,224)
 }
 
 .slideshow { 

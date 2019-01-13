@@ -1,8 +1,9 @@
 var express     = require("express");
 var router      = express.Router();
-var Podcast  = require("../models/podcast");
+var Podcast     = require("../models/podcast");
 var middleware  = require("../middleware");
 var Review      = require("../models/review");
+var Comment     = require("../models/comment");
 
 // Index Route - show all podcasts
 router.get("/", function(req, res){
@@ -20,14 +21,15 @@ router.get("/", function(req, res){
 router.post("/", middleware.isLoggedIn, function(req, res){
     // Get data from form and add to podcasts array
     var name = req.body.name;
-    var price = req.body.price;
+    // var price = req.body.price;
+    var website = req.body.website;
     var image = req.body.image;
     var desc = req.body.description;
     var author = {
         id: req.user._id,
         username: req.user.username
     };
-    var newPodcast = {name: name, image: image, description: desc, author: author, price: price};
+    var newPodcast = {name: name, image: image, description: desc, author: author};
     // Create a new podcast and save to DB
     Podcast.create(newPodcast, function(err, newlyCreated){
         if(err){
@@ -85,7 +87,7 @@ router.put("/:id", middleware.checkPodcastOwnership, function(req, res) {
 router.delete("/:id", middleware.checkPodcastOwnership, function (req, res) {
     Podcast.findById(req.params.id, function (err, podcast) {
         if (err) {
-            res.redirect("/podcats");
+            res.redirect("/podcasts");
         } else {
             // deletes all comments associated with the podcast
             Comment.remove({"_id": {$in: podcast.comments}}, function (err) {

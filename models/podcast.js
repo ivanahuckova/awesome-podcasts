@@ -3,6 +3,7 @@ var mongoose = require("mongoose");
 var podcastSchema = new mongoose.Schema({
    name: String,
    price: String,
+   website: String,
    image: String,
    description: String,
    author: {

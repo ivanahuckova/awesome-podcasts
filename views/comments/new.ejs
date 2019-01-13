@@ -2,17 +2,17 @@
 
 <div class="container">
     <div class="row">
-        <h1 style="text-align: center;">Add New Comment to <%= podcast.name %></h1>
+        <h1 class="center font-violet">Add New Comment to <%= podcast.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
             <form action= "/podcasts/<%= podcast._id %>/comments" method="POST">
                 <div class="form-group">
-                    <input class="form-control" type="text" name=comment[text] placeholder="text">
+                    <input class="form-control border-violet font-violet placeholder-violet" type="text" name=comment[text] placeholder="text">
                 </div>  
                 <div class="form-group">    
-                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                    <button class="btn btn-lg btn-yellow btn-block">Submit!</button>
                 </div>  
             </form>
-            <a href="/podcasts">Go Back</a>
+            <a class="font-violet" href="/podcasts">Go Back</a>
         </div>
         
     </div>

@@ -5,23 +5,24 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/stylesheets/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">
     </head>
     
     <body>
         
-        <nav class="navbar navbar-default">
+        <nav class="navbar navbar-default nav-white transparent">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/podcasts">Awesome Podcasts</a>
+                    <a class="navbar-brand font-violet" href="/podcasts">Awesome Podcasts</a>
                 </div>
                 <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right nav-white">
                         <% if(!currentUser) { %>
-                        <li><a href="/login">Login</a></li>
-                        <li><a href="/register">Sign Up</a></li>
+                        <li><a class="font-violet" href="/login">Login</a></li>
+                        <li><a class="font-violet" href="/register">Sign Up</a></li>
                         <% } else { %>
-                        <li><a href="/logout">Logout</a></li>
-                        <li><a>Signed in as <%=currentUser.username%></a></li>
+                        <li><a class="font-violet" href="/logout">Logout</a></li>
+                        <li><a class="font-violet">Signed in as <%=currentUser.username%></a></li>
                         <% } %>
                     </ul>
                 </div>
@@ -30,10 +31,10 @@
 
         <div class="container">
             <% if(error && error.length > 0) { %>
-                <div class="alert alert-danger" role="alert"><%= error %></div>
+                <div class="alert alert-yellow" role="alert"><%= error %></div>
             <% } %>
             
             <% if(success && success.length > 0) { %>
-                <div class="alert alert-success" role="alert"><%= success %></div>
+                <div class="alert alert-yellow" role="alert"><%= success %></div>
             <% } %>
         </div>

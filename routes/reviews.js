@@ -1,6 +1,6 @@
 var express     = require("express");
 var router      = express.Router({mergeParams: true});
-var Podcast  = require("../models/podcast");
+var Podcast     = require("../models/podcast");
 var Review      = require("../models/review");
 var middleware  = require("../middleware");
 

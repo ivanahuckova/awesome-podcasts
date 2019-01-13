@@ -1,13 +1,143 @@
+p, h1, h2, h3, h4, h5, a, button, input, textarea, div {
+    font-family: 'Inconsolata', monospace;
+}
+
+.alert-violet {
+    background-color: rgb(74,0,224, 0.2);
+    color:white;
+
+}
+
+.alert-yellow {
+    background-color: rgb(242,210,33, 0.2);
+    color:rgb(74,0,224)
+}
+
+.sign-button {
+    width: 200px;
+    border-width: 1px;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 5px;
+    margin: 0.5%;
+}
+
+.margin-top-2 {
+    margin-top: 2%;
+}
+input.placeholder-violet::placeholder {
+    color: rgb(74,0,224);
+}
+
+textarea.placeholder-violet::placeholder {
+    color: rgb(74,0,224);
+}
+
+h1.font-white {
+    color: white;
+}
+
+.font-white {
+    color: white;
+}
+
+.font-yellow {
+    color: #F2D221;
+}
+
+h1.font-yellow {
+    color: #F2D221;
+}
+
+h1.font-violet {
+    color: rgb(74,0,224);
+}
+
+a.font-violet {
+    color: rgb(74,0,224) !important;
+}
+
+.font-violet {
+    color: rgb(74,0,224);
+}
+
+.border-violet {
+    border-color: rgb(74,0,224);
+}
+
+.border-yellow {
+    border-color: #F2D221;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 20px;
+    padding: 1% 3%;
+}
+
+.btn-yellow {
+    background-color: #F2D221;
+    color: rgb(74,0,224);
+    font-weight: 700;
+}
+
+.btn-white {
+    background-color: white;
+    color: rgb(74,0,224);
+    font-weight: 700;
+}
+
+.btn-violet {
+    background-color: rgb(74,0,224);
+    color: white;
+    font-weight: 700;
+}
+
+.review-text {
+    text-align: justify; 
+    word-wrap: break-word;
+}
+
+.nav-white {
+    background-color: white;
+    border: no-border;
+
+}
+
+.navbar-default {
+    border-color: white;
+}
+.no-border {
+    border: none;
+}
 .thumbnail img {
     width: 100%;
 }
 
 .thumbnail {
-    padding: 0;
+    padding: 5%;
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(74,0,224,0.7), rgb(142,45,226,0.7));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(74,0,224,0.7), rgb(142,45,226,0.7));/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 10px;
 }
 
 .thumbnail .caption-full {
     padding: 9px;
+}
+
+.well {
+    background: #F2D221;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2D221, #FFFF66, #FFFF9D);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2D221, #FFFF66, #FFFF9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+    border-radius: 10px;
+
 }
 
 #delete-form {
@@ -15,9 +145,53 @@
 }
 
 .checked {
-    color: orange;
+    color: #F2D221;
 }
 
 #margin-bottom {
     margin-bottom: 10px;
+}
+
+.jumbotron {
+    background: #8E2DE2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(74,0,224), rgb(142,45,226));  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(74,0,224), rgb(142,45,226));/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* completely hiding radio button */
+input[type="radio"] {
+    display: none;
+  }
+  
+  /* simulate radiobutton appearance using pseudoselector */
+  input[type="radio"] + label:before {
+    content: "";
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    padding: 3px;
+    margin-right: 5px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 1px solid #bbbbbb;
+    background-color: #e7e6e7;
+    border-radius: 50%;
+  }
+  
+  /* appearance of checked radiobutton */
+  input[type="radio"]:checked + label:before {
+    background-color: rgb(74,0,224,0.7);
+  }
+  
+  /* resetting default box-sizing */
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+.navbar-custom {
+    background-image: none;
 }
