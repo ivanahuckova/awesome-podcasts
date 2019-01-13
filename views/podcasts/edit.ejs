@@ -3,7 +3,7 @@
     <div class="row">
         <h1 class="center font-violet">Edit <%= podcast.name %></h1>
         <div style="width: 30%; margin: 25px auto;">
-            <form action="/podcasts/<%= podcast %>?_method=PUT" method="POST">
+            <form action="/podcasts/<%= podcast._id%>?_method=PUT" method="POST">
                 <div class="form-group">
                     <input class="form-control placeholder-violet border-violet font-violet" type="text" name="podcast[name]" value="<%= podcast.name %>">
                 </div>

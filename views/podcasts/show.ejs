@@ -93,7 +93,7 @@
                             </p>
                             <% if(currentUser && comment.author.id.equals(currentUser._id)) { %>
                             <a class="btn btn-xs btn-violet" href="/podcasts/<%= podcast._id %>/comments/<%= comment._id %>/edit">Edit</a>
-                            <form action="/podcasts/<%= podcast_id %>/comments/<%= comment._id %>?_method=DELETE" method="POST" id="delete-form">
+                            <form action="/podcasts/<%= podcast._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST" id="delete-form">
                                 <input type="submit" class="btn btn-xs btn-white" value="Delete"></input>
                             </form>
                             <% } %>
