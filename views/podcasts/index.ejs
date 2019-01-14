@@ -13,26 +13,28 @@
 
     <div class="row text-center" style="display:flex; flex-wrap: wrap;">
         <% podcasts.forEach(function(podcast){ %>
-        <div class="col-md-3 col-sm-6">
-            <div class="thumbnail background-gradient no-border">
-                <img src="<%= podcast.image %>">
-                <div class="caption">
-                    <h4 class="font-white"><%= podcast.name %></h4>
-                    <% if (podcast.rating === 0) { %>
-                    <em class="font-white">No reviews yet.</em>
-                    <% } else { %>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star <% if (podcast.rating > 1.5) { %> checked <% } %>"></span>
-                    <span class="fa fa-star <% if (podcast.rating > 2.5) { %> checked <% } %>"></span>
-                    <span class="fa fa-star <% if (podcast.rating > 3.5) { %> checked <% } %>"></span>
-                    <span class="fa fa-star <% if (podcast.rating > 4.5) { %> checked <% } %>"></span>
-                    <% } %>
+        <a href="/podcasts/<%= podcast._id %>" class="col-md-3 col-sm-6">
+        
+                <div class="thumbnail background-gradient no-border">
+                    <img src="<%= podcast.image %>">
+                    <div class="caption">
+                        <h4 class="font-white"><%= podcast.name %></h4>
+                        <% if (podcast.rating === 0) { %>
+                        <em class="font-white">No reviews yet.</em>
+                        <% } else { %>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star <% if (podcast.rating > 1.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (podcast.rating > 2.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (podcast.rating > 3.5) { %> checked <% } %>"></span>
+                        <span class="fa fa-star <% if (podcast.rating > 4.5) { %> checked <% } %>"></span>
+                        <% } %>
+                    </div>
+                    <p>
+                        <span class="btn btn-yellow">More Info</span>
+                    </p>
                 </div>
-                <p>
-                    <a href="/podcasts/<%= podcast._id %>" class="btn btn-yellow">More Info</a>
-                </p>
-            </div>
-        </div>
+           
+        </a>    
         <% }); %>
     </div>
 </div>

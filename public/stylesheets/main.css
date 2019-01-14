@@ -57,6 +57,10 @@ a.font-violet {
     color: rgb(74,0,224) !important;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .font-violet {
     color: rgb(74,0,224);
 }
