@@ -65,6 +65,11 @@ a.font-violet {
     border-color: rgb(74,0,224);
 }
 
+hr.last-hr-none:last-child {
+    border: none;
+}
+
+
 .border-yellow {
     border-color: #F2D221;
 }
